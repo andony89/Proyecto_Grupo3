@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Perfil de Usuario</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    form {
+      width: 400px;
+      margin: 0 auto;
+    }
+    
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type="file"] {
+      margin-top: 10px;
+    }
+    
+    img {
+      margin-top: 10px;
+      display: block;
+      max-width: 200px;
+      height: auto;
+    }
+    
+    button {
+      display: block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Perfil de Usuario</h1>
+  
+  <form>
+    <h2>Información Personal</h2>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" placeholder="Ingrese su nombre">
+    
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" placeholder="Ingrese sus apellidos">
+    
+    <label for="correo">Correo Electrónico:</label>
+    <input type="email" id="correo" placeholder="Ingrese su correo electrónico">
+    
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" placeholder="Ingrese su teléfono">
+    
+    <label for="cedula">Cédula:</label>
+    <input type="text" id="cedula" placeholder="Ingrese su número de cédula">
+    
+    <h2>Foto de Perfil</h2>
+    <input type="file" id="foto" accept="image/*">
+    <img id="imagen-perfil" src="#" alt="Foto de Perfil">
+    
+    <h2>Opciones</h2>
+    <button onclick="visualizarCitas()">Visualizar Citas</button>
+    <button onclick="verNotificaciones()">Notificaciones</button>
+    <button onclick="verCotizaciones()">Cotizaciones</button>
+  </form>
+  
+  <script>
+    // Funciones para las opciones
+    function visualizarCitas() {
+     
+    }
+    
+    function verNotificaciones() {
+  
+    }
+    
+    function verCotizaciones() {
+     
+    }
+    
+    document.getElementById("nombre").value = "Juan";
+    document.getElementById("apellidos").value = "Pérez";
+    document.getElementById("correo").value = "juan@example.com";
+    document.getElementById("telefono").value = "123456789";
+    document.getElementById("cedula").value = "1234567890";
+    
+    var inputFoto = document.getElementById("foto");
+    var imagenPerfil = document.getElementById("imagen-perfil");
+    
+    inputFoto.addEventListener("change", function(event) {
+      var file = event.target.files[0];
+      var reader = new FileReader();
+      
+      reader.onload = function(e) {
+        imagenPerfil.src = e.target.result;
+      };
+      
+      reader.readAsDataURL(file);
+    });
+  </script>
+</body>
+</html>

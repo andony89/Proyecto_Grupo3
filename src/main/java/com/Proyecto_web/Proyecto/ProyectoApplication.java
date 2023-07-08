@@ -1,4 +1,4 @@
-package com.Proyecto_web.Proyecto;
+ package com.Proyecto_web.Proyecto;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

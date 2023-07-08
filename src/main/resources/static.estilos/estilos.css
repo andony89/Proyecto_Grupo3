@@ -1,0 +1,167 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos del header */
+header {
+  background-color: #808080;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 60px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.logo {
+  /* Estilos para el logo */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 10px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-bar form {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Estilos de la sección de información de la empresa */
+.company-info {
+  width: 80%;
+  margin: 0 auto;
+  background-image: url('https://th.bing.com/th/id/OIP.oh3xZta3-GwHO2HHdaXJZAHaEf?pid=ImgDet&rs=1');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: #000000;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.info-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Estilos de la sección de beneficios */
+.benefits {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #f1f1f1;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.benefits-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.benefits-item {
+  flex: 0 0 200px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilos del footer */
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.contact-info,
+.services {
+  width: 45%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.contact-info h4,
+.services h4 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.contact-info p,
+.services ul {
+  margin-bottom: 10px;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rights {
+  color: #ffffff;
+  font-size: 12px;
+}
