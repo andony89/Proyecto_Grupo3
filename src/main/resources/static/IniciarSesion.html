@@ -2,7 +2,9 @@
 <html>
 <head>
   <title>Inicio de Sesión</title>
+  
   <style>
+      
     body {
       background: #efefef;
       font-family: ‘Open Sans’, sans-serif;
@@ -53,34 +55,49 @@
     button:hover {
       background-color: #45a049;
     }
+    
   </style>
 </head>
 <body>
-  <h1>Iniciar Sesión</h1>
-  
-  <form>
-    <h2>Inicio de Sesión</h2>
-    <label for="usuario">Usuario:</label>
-    <input type="text" id="usuario" placeholder="Ingrese su usuario:">
-    
-    <label for="contraseña">Contraseña:</label>
-    <input type="text" id="contraseña" placeholder="Ingrese su contraseña:">
-    <input type="button" value="Iniciar Sesión">
-    <!-- Botón para iniciar sesión -->
-    
-  </form>
-  
-  <a 
-      href=»/signup.html»> ¿No tienes cuenta? Crear una
-  </a>
-  
-  <input type="button" value="Crear Cuenta">
-  <!-- Botón para crear cuenta nueva -->
-  
-  <script>
+  <h1>Inicio de Sesión</h1>
+    <form onsubmit="return validarFormulario()" method="post" action="procesar_login.php">
+        <label for="Usuario">Usuario:</label>
+        <input type="text" id="Usuario" name="Usuario" required><br><br>
+        <label for="Contraseña">Contraseña:</label>
+        <input type="password" id="Contraseña" name="Contraseña" required><br>
+        <p id="mensajeContraseña"></p><br>
+        <input type="submit" value="Iniciar Sesión">
+    </form>
 
-    document.getElementById("usuario").value = "Juan Pérez";
-    document.getElementById("contraseña").value = "12345678";
+    <a 
+      href=»/signup.html»> ¿No tienes cuenta? Crear una
+    </a>
+  
+    <input type="button" value="Crear Cuenta">
+    <!-- Botón para crear cuenta nueva -->
+  
+    <script>
+        
+        function validarFormulario() {
+        
+            var Contraseña = document.getElementById("Contraseña").value;
+            var mensajeContraseña = document.getElementById("mensajeContraseña");
+
+            // Verificar la dependencia de la contraseña (mínimo 8 caracteres, letras mayúsculas, minúsculas y números)
+            var regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+            
+            if (!regex.test(Contraseña)) {
+            
+                mensajeContraseña.innerHTML = "La contraseña debe contener al menos 8 caracteres, incluyendo letras mayúsculas, minúsculas y números.";
+                return false;
+                
+            } else {
+            
+                mensajeContraseña.innerHTML = "";
+                return true;
+                
+            }
+        }
 
   </script>
 </body>
