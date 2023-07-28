@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilo.css">
+        <title>MotorsTicoSport</title>
+    </head>
+    <body>
+        <section class="contenido">
+            <div class="mostrador" id="mostrador">
+                <div class="fila">
+                    <div class="item" onclick="cargar(this)">
+                        <div class="contenedor-foto">
+                            <img src="img/1.jpg" alt="">
+                        </div>
+                        <p class="descripcion">Enzo Ferrari</p>
+                        <span class="precio">$ 1.300.000</span>
+                    </div>
+                    <div class="item" onclick="cargar(this)">
+                        <div class="contenedor-foto">
+                            <img src="img/2.jfif" alt="">
+                        </div>
+                        <p class="descripcion" id>Audi S5 </p>
+                        <span class="precio">$ 78.000</span>
+                    </div>
+                    <div class="item" onclick="cargar(this)">
+                        <div class="contenedor-foto">
+                            <img src="img/a.jfif" alt="">
+                        </div>
+                        <p class="descripcion">Audi e-tron
+                        </p>
+                        <span class="precio">$ 100.600</span>
+                    </div>
+                    <div class="item" onclick="cargar(this)">
+                        <div class="contenedor-foto">
+                            <img src="img/3.jfif" alt="">
+                        </div>
+                        <p class="descripcion">Mercedez-Benz AMG</p>
+                        <span class="precio">$ 89.800</span>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="item" onclick="cargar(this)">
+                        <div class="contenedor-foto">
+                            <img src="img/4.jfif" alt="">
+                        </div>
+                        <p class="descripcion">Mercedez-Benz AMG</p>
+                        <span class="precio">$ 130.200</span>
+                    </div>
+                    <div class="item" onclick="cargar(this)">
+                        <div class="contenedor-foto">
+                            <img src="img/6.jfif" alt="">
+                        </div>
+                        <p class="descripcion">Porche 911</p>
+                        <span class="precio">$ 2.000.000</span>
+                    </div>
+                    <div class="item" onclick="cargar(this)">
+                        <div class="contenedor-foto">
+                            <img src="img/7.jpg" alt="">
+                        </div>
+                        <p class="descripcion">Audi A6</p>
+                        <span class="precio">$ 92.500</span>
+                    </div>
+                    <div class="item" onclick="cargar(this)">
+                        <div class="contenedor-foto">
+                            <img src="img/8.jpg" alt="">
+                        </div>
+                        <p class="descripcion">Audi e-tron PB18</p>
+                        <span class="precio">$ 1.800.000</span>
+                    </div>
+                </div> 
+            </div>
+            <!-- CONTENEDOR DEL ITEM SELECCIONADO -->
+            <div class="seleccion" id="seleccion">
+                <div class="cerrar" onclick="cerrar()">
+                    &#x2715
+                </div>
+                <div class="info">
+                    <img src="img/1.png" alt="" id="img">
+                    <h2 id="modelo">Enzo Ferrari</h2>
+                    <p id="descripcion">Descripción Modelo 1</p>
+
+                    <span class="precio" id="precio">$ 1.300.000</span>
+
+                    <div class="fila">
+                        <div class="size">
+                            <label for="">Estilo</label>
+                            <select name="" id="">
+                                <option value="">a</option>
+                                <option value="">b</option>
+                                <option value="">c</option>
+                                <option value="">d</option>
+                            </select>
+                        </div>
+                        <button>AGREGAR AL CARRITO</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
